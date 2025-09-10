@@ -3,7 +3,7 @@ services:
     name: n8n
     env: docker
     plan: free
-    region: oregon  # choose closest
+    region: oregon  # pick your closest region
     dockerfilePath: Dockerfile
     envVars:
       - key: N8N_HOST
@@ -16,3 +16,5 @@ services:
         value: https://<your-app-name>.onrender.com
       - key: NODE_ENV
         value: production
+      - key: N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS
+        value: "false"
